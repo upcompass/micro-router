@@ -1,0 +1,45 @@
+{
+  "name": "@upcompass/micro-router",
+  "version": "0.0.2",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upcompass/micro-router.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/upcompass/micro-router",
+  "scripts": {
+    "precommit": "lint-staged",
+    "prepare": "taskr"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --no-semi --single-quote --write",
+      "git add"
+    ],
+    "*.js": [
+      "prettier --no-semi --single-quote --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "url-pattern": "^1.0.3"
+  },
+  "devDependencies": {
+    "@taskr/clear": "^1.0.6",
+    "@taskr/esnext": "^1.0.0",
+    "@taskr/shell": "^1.0.6",
+    "@taskr/typescript": "^1.0.6",
+    "@types/node": "8.0.14",
+    "husky": "^0.14.3",
+    "jest": "^20.0.4",
+    "lint-staged": "^4.0.1",
+    "prettier": "^1.5.2",
+    "taskr": "^1.0.6",
+    "tslint": "^4.5.1",
+    "tslint-config-prettier": "^1.1.0",
+    "typescript": "^2.4.1"
+  }
+}
