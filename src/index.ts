@@ -6,7 +6,7 @@ export type HttpVerb = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' | 'HEAD' | 'O
 
 export type RouteHandler = (method: HttpVerb, path: string, handler: RequestHandler) => RequestHandler
 
-export type RequestHandler = (req: RoutedIncomingMessage , res: ServerResponse) => any
+export type RequestHandler = (req: RoutedIncomingMessage, res: ServerResponse) => any
 
 export interface RoutedIncomingMessage extends IncomingMessage {
   params: object,
@@ -30,8 +30,8 @@ export const Route: RouteHandler = (method, path, handler) => {
 
   const route = new UrlPattern(path)
 
-  return (req: IncomingMessage , res: ServerResponse) => {
-    const { params, query }: {params: object, query: object} = parseRoute(route, req.url)
+  return (req: IncomingMessage, res: ServerResponse) => {
+    const { params, query }: { params: object, query: object } = parseRoute(route, req.url)
     if (params && req.method === method) {
       return handler(Object.assign(req, { params, query }), res)
     }
@@ -40,12 +40,28 @@ export const Route: RouteHandler = (method, path, handler) => {
 
 export const Routes = (defaultHandler: RequestHandler, ...handlers: RequestHandler[]) => {
   const routeHandlers = [...handlers, defaultHandler]
+  const errorHandler = (req, res) => {
+    res.statusCode = 500
+    res.end(JSON.stringify({
+      message: 'Internal server error',
+      status: 'error'
+    }))
+  }
+
   return async (req, res) => {
-      for (const handler of routeHandlers) {
+    for (const handler of routeHandlers) {
+      try {
         const result = await handler(req, res)
         if (result || res.headersSent) {
           return result
         }
+      } catch (error) {
+        return errorHandler
       }
     }
+
+    if (!res.headersSent) {
+      return errorHandler(req, res)
+    }
+  }
 }
