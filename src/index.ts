@@ -38,30 +38,17 @@ export const Route: RouteHandler = (method, path, handler) => {
   }
 }
 
-export const Routes = (defaultHandler: RequestHandler, ...handlers: RequestHandler[]) => {
-  const routeHandlers = [...handlers, defaultHandler]
-  const errorHandler = (req, res) => {
-    res.statusCode = 500
-    res.end(JSON.stringify({
-      message: 'Internal server error',
-      status: 'error'
-    }))
-  }
-
+export const Routes = (...handlers: RequestHandler[]) => {
   return async (req, res) => {
-    for (const handler of routeHandlers) {
-      try {
-        const result = await handler(req, res)
-        if (result || res.headersSent) {
-          return result
-        }
-      } catch (error) {
-        return errorHandler
+    for (const handler of handlers) {
+      const result = await handler(req, res)
+      if (result || res.headersSent) {
+        return result
       }
     }
-
     if (!res.headersSent) {
-      return errorHandler(req, res)
+      const error = new Error('Unhandled route')
+      throw error
     }
   }
 }
