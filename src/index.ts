@@ -38,6 +38,13 @@ export const Route: RouteHandler = (method, path, handler) => {
   }
 }
 
+export class RouteError extends Error {
+    constructor(message: string) {
+        super(message)
+        Object.setPrototypeOf(this, RouteError.prototype)
+    }
+}
+
 export const Routes = (...handlers: RequestHandler[]) => {
   return async (req, res) => {
     for (const handler of handlers) {
@@ -47,7 +54,7 @@ export const Routes = (...handlers: RequestHandler[]) => {
       }
     }
     if (!res.headersSent) {
-      const error = new Error('Unhandled route')
+      const error = new RouteError(`Unhandled route: ${req.url}`)
       throw error
     }
   }
