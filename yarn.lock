@@ -261,9 +261,9 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@taskr/clear@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@taskr/clear/-/clear-1.0.6.tgz#0a68bf1336952765c8ef482bc6902c9bf41175d3"
+"@taskr/clear@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@taskr/clear/-/clear-1.1.0.tgz#0a88d180bed2f91f310136375a72c00b50834fd1"
   dependencies:
     bluebird "^3.5.0"
     rimraf "^2.5.4"
@@ -1339,7 +1339,7 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-glob@^7.0.5, glob@^7.1.1, glob@^7.1.2:
+glob@^7.1.1, glob@^7.1.2:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
   dependencies:
@@ -3215,13 +3215,7 @@ rewrite-imports@^1.0.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/rewrite-imports/-/rewrite-imports-1.4.0.tgz#198ebb73f59cfee8d214516c774b6aeef2c54a6e"
 
-rimraf@^2.5.4, rimraf@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.1.tgz#c2338ec643df7a1b7fe5c54fa86f57428a55f33d"
-  dependencies:
-    glob "^7.0.5"
-
-rimraf@^2.6.3:
+rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.3:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.7.1.tgz#35797f13a7fdadc566142c29d4f07ccad483e3ec"
   dependencies:
