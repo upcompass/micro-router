@@ -23,11 +23,12 @@
     bluebird "^3.5.0"
     rimraf "^2.5.4"
 
-"@taskr/esnext@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@taskr/esnext/-/esnext-1.0.0.tgz#04fdb594da231891b9ee4e589cabdb9e259e769c"
+"@taskr/esnext@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@taskr/esnext/-/esnext-1.1.0.tgz#e8ca509f45fc57a4e2152945c27500c531cf87dd"
   dependencies:
     require-like "^0.1.2"
+    rewrite-imports "^1.0.0"
 
 "@taskr/shell@^1.0.6":
   version "1.0.6"
@@ -2398,6 +2399,10 @@ restore-cursor@^1.0.1:
   dependencies:
     exit-hook "^1.0.0"
     onetime "^1.0.0"
+
+rewrite-imports@^1.0.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/rewrite-imports/-/rewrite-imports-1.4.0.tgz#198ebb73f59cfee8d214516c774b6aeef2c54a6e"
 
 right-align@^0.1.1:
   version "0.1.3"
