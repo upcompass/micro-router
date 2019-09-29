@@ -40,6 +40,6 @@
     "taskr": "^1.0.6",
     "tslint": "^4.5.1",
     "tslint-config-prettier": "^1.1.0",
-    "typescript": "^2.4.1"
+    "typescript": "^3.6.3"
   }
 }
