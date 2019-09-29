@@ -2648,9 +2648,9 @@ symbol-tree@^3.2.1:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
 
-taskr@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/taskr/-/taskr-1.0.6.tgz#6ba5b671f51703f780fb6335d3dc792cfcf9c192"
+taskr@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/taskr/-/taskr-1.1.0.tgz#4f29d0ace26f4deae9a478eabf9aa0432e884438"
   dependencies:
     bluebird "^3.5.0"
     clor "^5.1.0"
