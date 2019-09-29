@@ -35,9 +35,9 @@
   dependencies:
     execa "^0.7.0"
 
-"@taskr/typescript@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@taskr/typescript/-/typescript-1.0.6.tgz#65b050b48f28fb3e6742ba958586c94004575f80"
+"@taskr/typescript@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@taskr/typescript/-/typescript-1.1.0.tgz#60570a5c9f1353f3240931a0d1fb439870294fd9"
   dependencies:
     typescript "^2.3.0"
 
