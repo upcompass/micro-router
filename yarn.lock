@@ -482,9 +482,9 @@
     "@types/istanbul-lib-coverage" "*"
     "@types/istanbul-lib-report" "*"
 
-"@types/node@13.9.7":
-  version "13.9.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.7.tgz#53afa8bdb19c3ee7deb06290d50172e0b0a03985"
+"@types/node@13.9.8":
+  version "13.9.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.8.tgz#09976420fc80a7a00bf40680c63815ed8c7616f4"
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
