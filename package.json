@@ -34,7 +34,7 @@
     "@taskr/typescript": "^1.1.0",
     "@types/node": "13.13.4",
     "husky": "^4.2.5",
-    "jest": "^25.5.0",
+    "jest": "^25.5.1",
     "lint-staged": "^10.2.0",
     "prettier": "^2.0.5",
     "taskr": "^1.1.0",
