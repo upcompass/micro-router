@@ -35,7 +35,7 @@
     "@types/node": "14.0.25",
     "husky": "^7.0.1",
     "jest": "^27.0.6",
-    "lint-staged": "^11.0.1",
+    "lint-staged": "^11.1.0",
     "prettier": "^2.3.2",
     "taskr": "^1.1.0",
     "tslint": "^6.1.3",
